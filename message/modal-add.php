@@ -13,22 +13,22 @@
              <div class="col-md-6">
                 <div class="form-group">
                     <label for="name">Product Name</label>
-                    <input type="text" class=" form-control" name="name" id="name">
+                    <input type="text" class=" form-control shadow-none" name="name" id="name">
                 </div>
                 <div class="form-group mt-4">
                     <label for="price">Product Price</label>
-                    <input type="text" class=" form-control" name="price" id="price">
+                    <input type="text" class=" form-control shadow-none" name="price" id="price">
                 </div>
                 <div class="form-group mt-4">
                     <label for="qty">Product Qty</label>
-                    <input type="text" class=" form-control" name="qty" id="qty">
+                    <input type="text" class=" form-control shadow-none" name="qty" id="qty">
                 </div>
              </div>
 
              <div class="col-md-6">
                 <div class="form-group">
                     <label for="image">Product Image</label>
-                    <input type="file" class=" form-control" name="image" id="image">
+                    <input type="file" class=" form-control shadow-none" name="image" id="image">
                     <button type="button" class=" btn btn-info rounded-0" id="btn_upload">upload</button>
                 </div>
                 <div class="block-img">

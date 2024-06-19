@@ -10,7 +10,7 @@
       </li>
       <!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
+        <a class="nav-link collapsed" href="../products/list.php">
           <i class="bi bi-bookmark"></i>
           <span>Sale</span>
         </a>
@@ -18,13 +18,11 @@
       <!-- End Profile Page Nav -->
 
        <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
+        <a class="nav-link collapsed" href="../profile/profile.php">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
       </li>
-
-      
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-contact.html">
