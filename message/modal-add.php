@@ -7,7 +7,7 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add Saling</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form>
+      <form id="formAdd" method="POST" enctype="multipart/form-data"> 
       <div class="modal-body">
          <div class="row">
              <div class="col-md-6">
