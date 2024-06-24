@@ -27,6 +27,7 @@
 
              <div class="col-md-6">
                 <div class="form-group">
+                    <input type="hidden" name="" id="response_img">
                     <label for="image">Product Image</label>
                     <input type="file" class=" form-control shadow-none" name="image" id="image">
                     <button type="button" class=" btn btn-info rounded-0" id="btn_upload">upload</button>
