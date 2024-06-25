@@ -27,7 +27,8 @@
 
              <div class="col-md-6">
                 <div class="form-group">
-                    <input type="hidden" name="" id="response_img">
+                    
+                    <input type="hidden" name="response_id_img" id="response_id_img">
                     <label for="image">Product Image</label>
                     <input type="file" class=" form-control shadow-none" name="image" id="image">
                     <button type="button" class=" btn btn-info rounded-0" id="btn_upload">upload</button>
@@ -40,7 +41,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary" id="btn_submit">Save</button>
       </div>
       </form>
     </div>

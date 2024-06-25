@@ -18,6 +18,7 @@
                     <h5 class="card-title">Top Selling <span>| Today</span></h5>
                     <button data-bs-toggle="modal" data-bs-target="#ModalAdd" class=" btn btn-primary btn-sm rounded-0">add more</button>
                 </div>
+            
                 <table class="table table-borderless">
                     <thead>
                         <tr>

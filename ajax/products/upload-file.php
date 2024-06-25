@@ -21,7 +21,8 @@
      
       echo json_encode([
         'status' => 200,
-        'image' => $newName
+        'image' => $newName,
+        'id' => mysqli_insert_id($conn),
       ]);
       
   }else{
