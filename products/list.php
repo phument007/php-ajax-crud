@@ -10,13 +10,13 @@
       </nav>
     </div><!-- End Page Title -->
     <!-- Top Selling -->
-     <?php include "../message/modal-add.php" ?>
+    <?php include "../message/modal-add.php" ?>
     <div class="col-12">
         <div class="card top-selling overflow-auto">
             <div class="card-body pb-0">
                 <div class="d-flex justify-content-between align-items-center">
                     <h5 class="card-title">Top Selling <span>| Today</span></h5>
-                    <button data-bs-toggle="modal" data-bs-target="#ModalAdd" class=" btn btn-primary btn-sm rounded-0">add more</button>
+                    <button data-bs-toggle="modal" data-bs-target="#ModalAdd" class=" btn btn-primary btn-sm rounded-0 btn_addMore">add more</button>
                 </div>
             
                 <table class="table table-borderless">
@@ -27,6 +27,7 @@
                             <th scope="col">Price</th>
                             <th scope="col">Sold</th>
                             <th scope="col">Revenue</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody id="tb_data">

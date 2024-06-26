@@ -12,6 +12,7 @@
          <div class="row">
              <div class="col-md-6">
                 <div class="form-group">
+                    <input type="hidden" name="product_id_update" id="product_id_update">
                     <label for="name">Product Name</label>
                     <input type="text" class=" form-control shadow-none" name="name" id="name">
                 </div>
@@ -27,11 +28,11 @@
 
              <div class="col-md-6">
                 <div class="form-group">
-                    
+                    <input type="hidden" name="old_image" id="old_image">
                     <input type="hidden" name="response_id_img" id="response_id_img">
                     <label for="image">Product Image</label>
                     <input type="file" class=" form-control shadow-none" name="image" id="image">
-                    <button type="button" class=" btn btn-info rounded-0" id="btn_upload">upload</button>
+                    <button type="button" class=" btn btn-info rounded-0 btn_upload" id="btn_upload">upload</button>
                 </div>
                 <div class="block-img">
 
@@ -41,7 +42,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" id="btn_submit">Save</button>
+        <button type="submit" class="btn btn-primary btn_save" id="btn_submit">Save</button>
       </div>
       </form>
     </div>
