@@ -11,29 +11,22 @@
     </div><!-- End Page Title -->
     <!-- Top Selling -->
     <?php include "../message/modal-add.php" ?>
+    <?php include "../message/modal-del.php" ?>
     <div class="col-12">
         <div class="card top-selling overflow-auto">
             <div class="card-body pb-0">
                 <div class="d-flex justify-content-between align-items-center">
                     <h5 class="card-title">Top Selling <span>| Today</span></h5>
-                    <button data-bs-toggle="modal" data-bs-target="#ModalAdd" class=" btn btn-primary btn-sm rounded-0 btn_addMore">add more</button>
+                    <button data-bs-toggle="modal" data-bs-target="#ModalAdd" class=" btn btn-primary btn-sm rounded-0 btn_addMore">add<i class="bi bi-plus-circle"></i></button>
                 </div>
-            
-                <table class="table table-borderless">
-                    <thead>
-                        <tr>
-                            <th scope="col">Preview</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Sold</th>
-                            <th scope="col">Revenue</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tb_data">
-                        
-                    </tbody>
-                </table>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class=" btn btn-danger btn-sm rounded-0 btn_reset_product">Reset</button>
+                    <input class="w-25 form-control shadow-none" type="search" name="" id="search_product" placeholder="search here..">
+                </div>
+                <div class="table_products">
+
+                </div>
+                
          
             </div>
 

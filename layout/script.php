@@ -1,19 +1,45 @@
 <script>
 
-    function select(){
+    function select(search="",pagination=1){
         $.ajax({
             type: "GET",
-            url: "../ajax/products/select.php",
+            url: "../ajax/products/select.php?search="+search+"&paginate="+pagination,
             success: function (response) {
-                $("#tb_data").html(response);
+                $(".table_products").html(response);
             }
         });
     }
     select();
 
-    //Upload file
+    //Upload file for insert product
     $(document).on('click','.btn_upload',function () {
          let allData = new FormData($("#formAdd")[0]);
+         $.ajax({
+            type: "POST",
+            url: "../ajax/products/upload-file.php",
+            data: allData,
+            dataType: "json",
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                if(response.status == 200){
+                  
+                   var html = `
+                     <img style="width:100%; height:100%;" src="../ajax/temp/${response.image}" alt="">
+                     <button type="button" onclick="Cancle(${response.id})" class=" btn btn-danger rounded-0 btn-sm btn_cancle">Cancle</button>
+                   `; 
+
+                   $(".block-img").html(html);
+                   $("#response_id_img").val(response.id);
+                   $("#image").val('');
+                }
+            }
+         });
+    });
+
+    //Upload file for Update Data
+    $(document).on('click','#btn_upload',function () {
+         let allData = new FormData($("#formUpdate")[0]);
          $.ajax({
             type: "POST",
             url: "../ajax/products/upload-file.php",
@@ -123,11 +149,64 @@
             contentType:false,
             processData: false,
             success: function (response) {
-                
+                if(response.status == 200){
+                     $("#formAdd").trigger('reset');
+                     $(".block-img").html('');
+                     $("#ModalAdd").modal('hide');
+                     select();
+                }
             }
         });
         
     });
 
+    //Even for show moldal delete
+    $(document).on('click','.btn_show_modal_remove',function () {
+        let id = $(this).data('id');
+        $("#deleted_id").val(id);
+    });
 
+    //Event for delete data
+    $(document).on('click','.btn_yes_delete',function () {
+        let id = $("#deleted_id").val();
+        $.ajax({
+            type: "POST",
+            url: "../ajax/products/destroy.php",
+            data: {
+                id : id,
+            },
+            dataType: "json",
+            success: function (response) {
+                if(response.status == 200){
+                    $('#ModalDeleted').modal('hide');
+                    select();
+                }
+            }
+        });
+    });
+
+   
+    //Event for search Product 
+    $(document).on('input','#search_product',function () {
+        let search = $(this).val();
+        select(search);
+    });
+
+
+    //Event for Reset Product 
+
+    $(document).on('click','.btn_reset_product',function(){
+
+        select();
+        $("#search_product").val('');   
+
+    });
+
+
+
+   //Event for pagination
+   function Pagination($num){
+      let $page = $num;
+      select($page);
+   }
 </script>
